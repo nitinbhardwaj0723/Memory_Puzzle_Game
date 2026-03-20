@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Pro Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<h1>🧠 Memory Pro Game</h1>
+
+<div class="top-bar">
+  <span>⏱ Time: <span id="time"></span></span>
+  <span>💰 Coins: <span id="coins">0</span></span>
+  <span>🔥 Combo: <span id="combo">0</span></span>
+</div>
+
+<button onclick="startGame()">▶ Start</button>
+<button onclick="toggleTheme()">🌙 Dark Mode</button>
+
+<div id="gameBoard"></div>
+
+<script type="module" src="js/game.js"></script>
+</body>
+</html>

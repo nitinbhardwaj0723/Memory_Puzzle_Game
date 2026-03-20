@@ -1,0 +1,103 @@
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* CENTER EVERYTHING */
+  background: #f5f5f5;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* GAME BOARD */
+#gameBoard {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  width: 80px;
+  height: 80px;
+  perspective: 1000px;
+}
+
+/* INNER FLIP */
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.open .inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT BACK */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #444;
+}
+
+.back {
+  background: green;
+  transform: rotateY(180deg);
+}
